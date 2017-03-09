@@ -242,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62, y: 7}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590671502
@@ -277,7 +277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Find a BlackRock Employee and Say Hello
 --- !u!222 &590671503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ Prefab:
     - target: {fileID: 114000011744501634, guid: 87596db941ad3bf45a16b586b6e28b5c,
         type: 2}
       propertyPath: drawVisualMeshes
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000012342941982, guid: 87596db941ad3bf45a16b586b6e28b5c,
         type: 2}
@@ -415,8 +415,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62, y: 7}
-  m_SizeDelta: {x: 100, y: 250}
+  m_AnchoredPosition: {x: 62, y: 4}
+  m_SizeDelta: {x: 100, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723731982
 MonoBehaviour:
@@ -444,17 +444,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name: Sri Annapurna B
-
-    Role: APG
-
-    Join Date: 01-01-2333'
+  m_Text: "\rSri Annapurna Bhupatiraju, Analyst\r\nSoftware Development\r\nAPG-Exec-Graduate
+    Analyst\nsriannapurna.bhupatiraju@blackrock.com\r\n1-646-231-1017 (11-1017)\nsbhupati\n40
+    East 52nd Street New York NY 10022- NYC"
 --- !u!222 &723731983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -542,7 +540,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 735379381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.03181, y: 0.03181, z: 0.03181}
   m_Children:
   - {fileID: 723731981}
@@ -649,7 +647,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: b4a60f96d853beb449458a8e0f291773, type: 3}
+  m_Texture: {fileID: 2800000, guid: 58694f89b52d1e941baca983a86af38b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -875,8 +873,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62, y: 7}
-  m_SizeDelta: {x: 100, y: 250}
+  m_AnchoredPosition: {x: 62, y: 4}
+  m_SizeDelta: {x: 100, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331424871
 MonoBehaviour:
@@ -904,17 +902,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name: Tulika Bhatt
-
-    Role: APG Analyst
-
-'
+  m_Text: "Tulika Bhatt, Analyst\nSoftware Development\r\nAPG-Exec-Graduate Analyst\ntulika.bhatt@blackrock.com\r\n1-646-231-1581
+    (11-1581)\ntubhatt\n40 East 52nd Street New York NY 10022- NYC"
 --- !u!222 &1331424872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -930,7 +925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456390523}
   m_Layer: 0
-  m_Name: Second
+  m_Name: Second Demo Profile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -943,7 +938,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1456390522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 735379385}
@@ -975,7 +970,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531593826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.031809933, y: 0.031809933, z: 0.031809933}
   m_Children:
   - {fileID: 1331424870}
@@ -1095,7 +1090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1946127867}
   m_Layer: 0
-  m_Name: First Profile
+  m_Name: First Demo Profile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,7 +1103,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946127866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1531593827}
@@ -1169,7 +1164,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 113f60f72e2df65439e405689c966f38, type: 3}
+  m_Texture: {fileID: 2800000, guid: f76fed4079992da4b92d823d05e9bb52, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
