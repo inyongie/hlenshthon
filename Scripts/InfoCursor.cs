@@ -1,52 +1,90 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.VR.WSA.Input;
 
 public class InfoCursor : MonoBehaviour {
-	
-	// These public fields become settable properties in the Unity editor.
-	public GameObject infoCollection;
-	private GameObject textPrefab;
 
-	private MeshRenderer meshRenderer;
+    // These public fields become settable properties in the Unity editor.
+	public GameObject first;
+    public GameObject second;
+    public GameObject welcomeText;
+    private bool showProfile = false;
+    private bool flag = true;
+    private int count = 0;
+    private MeshRenderer meshRenderer;
 
 	GestureRecognizer recognizer;
 
-	// Use this for initialization
-	void Start()
+    // Use this for initialization
+    void Start()
 	{
-		// Grab the mesh renderer that's on the same object as this script.
-		meshRenderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
+        if (count == 0)
+        {
+            welcomeText.SetActive(true);
+            count++;
+        }
+
+        second.SetActive(false);
+        first.SetActive(false);
+
+        // Grab the mesh renderer that's on the same object as this script.
+        meshRenderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
 
 		// Set up a GestureRecognizer to detect Select gestures.
 		recognizer = new GestureRecognizer();
 		recognizer.TappedEvent += (source, tapCount, ray) =>
 		{
+            if (count > 0)
+                welcomeText.SetActive(false);
 			// Do a raycast into the world that will only hit the Spatial Mapping mesh.
 			var headPosition = Camera.main.transform.position;
 			var gazeDirection = Camera.main.transform.forward;
 
 			RaycastHit hitInfo;
-			if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
-				30.0f, SpatialMapping.PhysicsRaycastMask))
-			{
-				// Move this object's parent object to
-				// where the raycast hit the Spatial Mapping mesh.
-				infoCollection.transform.position = hitInfo.point;
+            if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
+                30.0f, SpatialMapping.PhysicsRaycastMask) && showProfile)
+            {
+                if (flag)
+                {
+                    // Move this object's parent object to
+                    // where the raycast hit the Spatial Mapping mesh.
+                    first.transform.position = hitInfo.point;
 
-				// Rotate this object's parent object to face the user.
-				Quaternion toQuat = Camera.main.transform.localRotation;
-				toQuat.x = 0;
-				toQuat.z = 0;
-				infoCollection.transform.rotation = toQuat;
+                    // Rotate this object's parent object to face the user.
+                    Quaternion toQuat = Camera.main.transform.localRotation;
+                    toQuat.x = 0;
+                    toQuat.z = 0;
+                    first.transform.rotation = toQuat;
 
-				infoCollection.SetActive(true);
+                    first.SetActive(true);
+                    second.SetActive(false);
+                }
+                else
+                {
+                    // Move this object's parent object to
+                    // where the raycast hit the Spatial Mapping mesh.
+                    second.transform.position = hitInfo.point;
 
-
-
-			}
-		};
+                    // Rotate this object's parent object to face the user.
+                    Quaternion toQuat = Camera.main.transform.localRotation;
+                    toQuat.x = 0;
+                    toQuat.z = 0;
+                    second.transform.rotation = toQuat;
+        
+                    second.SetActive(true);
+                    first.SetActive(false);
+                }
+                flag = !flag;
+            }
+            else
+            {
+                second.SetActive(false);
+                first.SetActive(false);
+            }
+            showProfile = !showProfile;
+        };
 		recognizer.StartCapturingGestures();
 	}
 
